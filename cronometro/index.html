@@ -1,0 +1,192 @@
+<html>
+<head>
+<meta content='David Menezes' name='author'/>
+<meta content='pt-br' http-equiv='content-language'/>
+<meta content='text/html; charset=UTF-8' http-equiv='content-type'/>
+<meta content='© 2016 - 2017 Pixel Tools' name='copyright'/>
+<meta content='all' name='robots'/>
+<meta content='general' name='rating'/>
+<meta content='Pixel Tools' name='DC.title'/>
+<meta content='David Menezes' name='DC.creator '/>
+<meta content='index, follow' name='robots'/>
+<meta content='Cronometro Online facil para marcar o tempo, a ferramenta também possuí laps (pausas) entre tempos.' name='description'/>
+<meta content='#9d0000' name='theme-color'/>
+<meta content='#9d0000' name='msapplication-navbutton-color'/>
+<meta content='#9d0000' name='apple-mobile-web-app-status-bar-style'/>
+<link href='https://i.imgur.com/rZI1fOO.png' rel='icon' type='image/x-icon'/>
+<link href='https://i.imgur.com/mjaurMf.png' rel='apple-touch-icon' sizes='57x57'/>
+<link href='https://i.imgur.com/asy07VC.png' rel='apple-touch-icon' sizes='60x60'/>
+<link href='https://i.imgur.com/8SZjEZm.png' rel='apple-touch-icon' sizes='72x72'/>
+<link href='https://i.imgur.com/8FVSD2D.png' rel='apple-touch-icon' sizes='76x76'/>
+<link href='https://i.imgur.com/vkoxl0T.png' rel='apple-touch-icon' sizes='114x114'/>
+<link href='https://i.imgur.com/wurBDCe.png' rel='apple-touch-icon' sizes='120x120'/>
+<link href='https://i.imgur.com/zNvz0fI.png' rel='apple-touch-icon' sizes='144x144'/>
+<link href='https://i.imgur.com/lfVsUTM.png' rel='apple-touch-icon' sizes='152x152'/>
+<link href='https://i.imgur.com/Lyb9HR0.png' rel='apple-touch-icon' sizes='180x180'/>
+<link href='https://i.imgur.com/PLyBJMz.png' rel='icon' sizes='192x192' type='image/png'/>
+<link href='https://i.imgur.com/YzA3jQ5.png' rel='icon' sizes='32x32' type='image/png'/>
+<link href='https://i.imgur.com/RsDhCQC.png' rel='icon' sizes='96x96' type='image/png'/>
+<meta content='https://i.imgur.com/vkoxl0T.png' name='msapplication-TileImage'/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+<title>Cronometro Online</title>
+<link rel="stylesheet" href="css/cronometro.css">
+<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body ng-app="timerApp">
+<div class="menu">
+  <div class="menu1">
+    <a href="https://pixeltools.tk/"><img src="https://i.imgur.com/PLyBJMz.png" alt="Pixel Tools" width="50px" height="50px"/></a>
+  </div>
+  <div class="menu1">
+PIXEL TOOLS
+	</div>
+<div class="divisor2"></div>
+<a class="menu2" href="https://pixeltools.tk/">INICIO</a>
+<a class="menu2" href="https://pixeltools.tk/sobre/">SOBRE</a>
+<a class="menu2" href="https://pixeltools.tk/contato/">CONTATO</a>
+</div>
+	  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Pixel Tools - Cronometro -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2816982644079927"
+     data-ad-slot="2992698895"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      <div class="container" ng-controller="timerController"><center>
+          <div id="timer">                     <label>{{timeStatus | timerFilter }}</label>
+   </div>
+          <div class="buttons">
+             <button ng-click="startTimer()" class="botao" id="start" autofocus>Começar</button>
+             <button ng-click="stopTimer()" class="botao" id="stop">Parar</button>
+             <button ng-click="resetTimer()" class="botao" id="reset">Zerar</button>
+             <button ng-click="lapTimer()" class="botao" id="lap">Tempo</button>
+          </div>
+          <div id="laplist">
+            <div ng-repeat="lap in laps" class="laptime">
+              <span> {{lap | timerFilter}} </span>
+            </div>
+          </div>
+          <div>=======================================</div>
+          <div id="total">
+            <span>{{getTotal()}} </span>
+          </div>
+     </center> </div>
+<script src="js/cronometro1.js"></script>
+        <script>
+    
+var app = angular.module("timerApp", []);
+app.controller("timerController", ["$scope", "$interval", function($scope, $interval) {
+ 
+ $scope.timeStatus = 0;
+ $scope.startTime = 0;
+ $scope.lapTime = 0;
+ $scope.laps =[];
+   
+   
+   $scope.startTimer = function() {
+    $scope.startTime = $scope.timeStatus;
+    
+    
+    if($scope.timeRun){
+      $interval.cancel($scope.timeRun);
+    }
+    $scope.timeUpdate = function(){
+        $scope.timeStatus++;
+    }
+    $scope.timeRun = $interval($scope.timeUpdate,10);
+  }
+  $scope.stopTimer = function(){
+  	if($scope.timeRun){
+  		$interval.cancel($scope.timeRun);
+  		$scope.startTime = $scope.timeStatus;
+  	}
+  	
+  	console.log($scope.timeStatus /100);
+  	$scope.result = $scope.timeStatus;
+  }
+  
+  $scope.resetTimer = function(){
+    $scope.timeStatus = 0;
+    $scope.laps = [];
+    $interval.cancel($scope.timeRun);
+  }
+  $scope.lapTimer = function(){
+  	//console.log("Start Time 0: " + $scope.startTime);
+  	
+  	$scope.lapTime = $scope.timeStatus - $scope.startTime;
+  	//console.log("Status Time : " + $scope.timeStatus);
+  	//console.log($scope.lapTime + " = " + $scope.timeStatus + " - " +  $scope.startTime);
+  	
+  	$scope.startTime = $scope.timeStatus;
+  	//console.log("Start Time : " + $scope.startTime);
+  	
+  	$scope.laps.push($scope.lapTime);
+  	//console.log("=========================");
+  	
+  }
+  $scope.getTotal = function(){
+  	var total = 0;
+  	if ($scope.laps.length == 0){
+  		total = 0;
+  	
+  }else{
+  	for (var i = 0; i < $scope.laps.length; i++){
+  		total += $scope.laps[i];
+  	}
+  	return total/100 + " Sec";
+  }
+}
+}]);
+app.filter('timerFilter', function () {
+	
+  return function (time) {
+  	var ms = time ;
+  	var seconds = Math.floor(ms / 100) % 60;
+  	var minutes = Math.floor(ms / 6000);
+  	var hours = Math.floor(ms / 360000) ;
+   
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+    
+    return hours+':'+minutes+':'+seconds+':'+(ms%100);
+    
+  }
+});
+</script>
+	  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-75565105-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<div class="footer">
+<div class="footer1">
+<p class="footertitle">Ferramentas</p>
+<a class="texto" href="https://pixeltools.tk/calculadora/">Calculadora Online</a><br/>
+<a class="texto" href="https://pixeltools.tk/cronometro/">Cronômetro Online</a><br/>
+<a class="texto" href="https://pixeltools.tk/relogio/">Relógio Online</a><br/>
+<a class="texto" href="https://pixeltools.tk/tabela-periodica/">Tabela Periodica</a><br/>
+<a class="texto" href="https://pixeltools.tk/calendario/">Calendário 2017</a><br/>
+</div>
+<div class="divisor"></div>
+<div class="footer2">
+<p class="footertitle">Projetos</p>
+<a class="texto" href="http://www.beew.tk/">Jogos Beew</a><br/>
+<a class="texto" href="http://transformice.pixeltools.tk/">Transformice Contas Publicas</a><br/>
+<a class="texto" href="http://transformice.pixeltools.tk/apk/">Transformice APK</a>
+</div>
+<div class="divisor"></div>
+<div class="footer3">
+<p class="footertitle"><a href="https://pixeltools.tk/"><img src="https://i.imgur.com/PLyBJMz.png" alt="Pixel Tools" width="80px" height="80px"/></a></p>
+Copyright © 2017 Pixel Tools<br/>
+Todos os direitos reservados.
+</div>
+</div>
+  </body>
+</html>

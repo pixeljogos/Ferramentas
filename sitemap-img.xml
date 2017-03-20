@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://pixeltools.tk/</loc>
+    <image:image>
+      <image:loc>https://i.imgur.com/HGCKAfy.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.imgur.com/06KbE4d.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.imgur.com/tED748q.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.imgur.com/hu6ilbq.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.imgur.com/gNWtnDR.png</image:loc>
+    </image:image>
+  </url> 
+  <url>
+    <loc>https://pixeltools.tk/tabela-periodica/</loc>
+    <image:image>
+      <image:loc>https://i.imgur.com/1PQ4Fwc.jpg</image:loc>
+    </image:image>
+  </url> 
+</urlset> 
