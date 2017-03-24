@@ -94,6 +94,204 @@
 		margin-top: 8px; 
 		display: inline-block 
 		}
-    body {
+body {
+    display: block;
     margin: 0px;
+    background: url(https://i.imgur.com/PVVxjoa.png);
+    padding-top: 10px;
+}
+.coluna {
+    display: inline-grid;
+    }
+.legenda {
+    background-color: #212121;
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;    
+    padding: 10px;
+    }
+.massa {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: small;
+    text-align: left;
+    display: inline-block;
+    }
+.numero {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: medium;
+    padding-left: 7px;
+    display: inline-block;
+    font-weight: bold;
+    }
+.nome {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: small;
+    text-align: left;
+    }
+.simbolo {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    }
+.separador {
+    width: 5%;
+    display: inline-block;
+    border: solid 2px transparent;
+    }
+.separador-2-coluna {
+    width: 50%;
+    display: inline-block;
+    }
+.metais-alcaninos {
+    background-color: #fec590;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.nao-metais-hidrogenio {
+    background-color: #ab91ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.gases-nobres-helio {
+    background-color: #91dff8;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.alcalinoterrosos {
+    background-color: #ffdf92;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.semimetais {
+    background-color: #93fe9e;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.nao-metais {
+    background-color: #ab91ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.halogenios {
+    background-color: #f992ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.outros-metais {
+    background-color: #fef991;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.propriedades-quimicas-desconhecidas {
+    background-color: #c8c8c8;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.info {
+    display: inline-block;
+    }
+
+    
+    
+    
+    
+.metais-alcaninos-leg {
+    background-color: #fec590;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.nao-metais-hidrogenio-leg {
+    background-color: #ab91ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.gases-nobres-helio-leg {
+    background-color: #91dff8;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.alcalinoterrosos-leg {
+    background-color: #ffdf92;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.semimetais-leg {
+    background-color: #93fe9e;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.nao-metais-leg {
+    background-color: #ab91ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.halogenios-leg {
+    background-color: #f992ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.outros-metais-leg {
+    background-color: #fef991;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.propriedades-quimicas-desconhecidas-leg {
+    background-color: #c8c8c8;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
     }
