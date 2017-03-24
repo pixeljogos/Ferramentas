@@ -1,4 +1,13 @@
+<html>
+<head>
 <style>
+body {
+    display: block;
+    margin: 0px;
+}
+.coluna {
+    display: inline-grid;
+    }
 .massa {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: small;
@@ -14,7 +23,7 @@
     }
 .nome {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: medium;
+    font-size: small;
     text-align: left;
     }
 .simbolo {
@@ -24,12 +33,21 @@
     font-weight: bold;
     padding: 5px;
     }
+.separador-1-coluna {
+    width: 80%;
+    display: inline-block;
+    }
+.separador-2-coluna {
+    width: 50%;
+    display: inline-block;
+    }
 .metais-alcaninos {
     background-color: #fec590;
     color: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     width: 5%;
     border: solid 2px black;
+    display: inline-block;
     }
 .nao-metais-hidrogenio {
     background-color: #ab91ff;
@@ -38,7 +56,6 @@
     width: 5%;
     border: solid 2px black;
     display: inline-block;
-    padding-right: 80%;
     }
 .gases-nobres-helio {
     background-color: #91dff8;
@@ -46,20 +63,72 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     width: 5%;
     border: solid 2px black;
+    display: inline-block;
+    }
+.alcalinoterrosos {
+    background-color: #ffdf92;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.semimetais {
+    background-color: #f992ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.nao-metais {
+    background-color: #ab91ff;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
     }
 </style>
+</head>
+<body>
+<!--Coluna 1-->
+<div calss="coluna">
 <div class="nao-metais-hidrogenio">
 <div class="massa">1.00794</div><div class="numero">1</div>
 <div class="simbolo">H</div>
 <div class="nome">Hídrogénio</div>
 </div>
+<div class="separador-1-coluna"></div>
 <div class="gases-nobres-helio">
-<div class="massa">1.00794</div><div class="numero">1</div>
-<div class="simbolo">H</div>
-<div class="nome">Hídrogénio</div>
+<div class="massa">4.00260</div><div class="numero">2</div>
+<div class="simbolo">He</div>
+<div class="nome">Hélio</div>
 </div>
+</div>
+<!--Coluna 2-->
+<div calss="coluna">
 <div class="metais-alcaninos">
-<div class="massa">6.941</div><div class="numero">3</div>
+<div class="massa">6.94100</div><div class="numero">3</div>
 <div class="simbolo">Li</div>
 <div class="nome">Lítio</div>
 </div>
+<div class="alcalinoterrosos">
+<div class="massa">9.01218</div><div class="numero">4</div>
+<div class="simbolo">Be</div>
+<div class="nome">Berílio</div>
+</div>
+<div class="separador-2-coluna"></div>
+<div class="semimetais">
+<div class="massa">10.8110</div><div class="numero">5</div>
+<div class="simbolo">B</div>
+<div class="nome">Boro</div>
+</div>
+<div class="nao-metais">
+<div class="massa">10.8110</div><div class="numero">5</div>
+<div class="simbolo">B</div>
+<div class="nome">Boro</div>
+</div>
+</div>
+</body>
+</html>
