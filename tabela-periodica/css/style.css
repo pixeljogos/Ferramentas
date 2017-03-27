@@ -1,6 +1,7 @@
 @media screen and (max-device-width: 480px) {
     body {
     margin:0px;
+    background: url(https://i.imgur.com/PVVxjoa.png);
     }
     .texto {
 		text-decoration: none;
