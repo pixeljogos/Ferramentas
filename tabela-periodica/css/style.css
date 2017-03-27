@@ -217,6 +217,22 @@ body {
     border: solid 2px black;
     display: inline-block;
     }
+.lantanideos {
+    background-color: #d2ff91;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.actinideos {
+    background-color: #b8ff91;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 5%;
+    border: solid 2px black;
+    display: inline-block;
+    }
 .info {
     display: inline-block;
     }
@@ -291,6 +307,22 @@ body {
     }
 .propriedades-quimicas-desconhecidas-leg {
     background-color: #c8c8c8;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.lantanideos-leg {
+    background-color: #d2ff91;
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 1.3%;
+    border: solid 2px black;
+    display: inline-block;
+    }
+.actinideos-leg {
+    background-color: #b8ff91;
     color: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     width: 1.3%;
